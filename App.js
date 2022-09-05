@@ -6,7 +6,7 @@ import Posts from './src/components/posts';
 import feed from './assets/data/feed';
 import SearchResults from './src/screens/screenResults';
 import DestinationSearch from './src/screens/DestinationSearch';
-
+import Guest from './src/screens/GuestScreen';
 const post1=feed[1]
 export default function App() {
   return (
@@ -17,7 +17,8 @@ export default function App() {
      {/*<HomeScreen/>*/}
      {/*<Posts data={post1}/>*/}
      {/*<SearchResults/>*/}
-     <DestinationSearch/>
+    {/* <DestinationSearch/> */} 
+    <Guest/>
     </SafeAreaView>
     
     </>
