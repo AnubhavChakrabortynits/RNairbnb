@@ -4,7 +4,7 @@ import { Dimensions } from "react-native";
 const styles=StyleSheet.create({
 container:{
 margin:5,
-width:Dimensions.get('window').width -10 ,
+width:Dimensions.get('window').width -10 
 
 },
 textInput:{

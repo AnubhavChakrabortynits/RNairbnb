@@ -1,11 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
-import { View,Text,TextInput,FlatList } from 'react-native'
+import { View,Text,TextInput,FlatList,Pressable } from 'react-native'
 import { styles } from './styles'
 import search from '../../../assets/data/search'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { useNavigation } from '@react-navigation/native'
 export default function DestinationSearch() {
 
+  const navigation=useNavigation()
 
   const [inputText,setInputText]=useState({initialState:''})
  
@@ -19,11 +21,13 @@ export default function DestinationSearch() {
   console.log("search data",item)
 
 
-  return <View style={styles.row}>
+  return <Pressable style={styles.row} onPress={()=>{
+    return navigation.navigate('Guest')
+  }}>
   <View style={styles.iconContainer}>
 <FontAwesome name="map-marker"  size={30}/>
   </View>
-  <Text style={styles.locationText}>{item.item.description}</Text></View>
+  <Text style={styles.locationText}>{item.item.description}</Text></Pressable>
   
 }} />
 

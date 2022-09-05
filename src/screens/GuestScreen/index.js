@@ -3,14 +3,16 @@ import React from 'react'
 import { View,Text, Pressable } from 'react-native'
 import { useState } from 'react'
 import { styles } from './style'
+import { useNavigation } from '@react-navigation/native'
 export default function Guest() {
+    const navigation=useNavigation()
 
     const [adults,setAdults]=useState(2)
     const [childs,setChilds]=useState(4)
     const [infants,setInfants]=useState(1)
   return (
- <View style={{width:"95%",backgroundColor:"white"}}>
-
+ <View style={{width:"95%",backgroundColor:"white",justifyContent:"space-between",height:"100%"}}>
+<View >
    <View style={styles.row}>
 
     <View >
@@ -39,6 +41,7 @@ export default function Guest() {
 </Text>
         </Pressable>
     </View>
+    
    </View>
 
 
@@ -106,6 +109,18 @@ export default function Guest() {
         </Pressable>
     </View>
    </View>
+   
+</View>
+
+
+   <View style={{marginBottom:20,backgroundColor:"#f15454",alignItems:"center",justifyContent:"center",height:50,marginHorizontal:20,borderRadius:10}}>
+    <Pressable onPress={()=>{
+        return navigation.navigate('')
+    }}>
+        <Text style={{fontWeight:"bold",fontSize:20,color:"white"}}>Search</Text>
+    </Pressable>
+   </View>
+   
  </View>
   )
 }
