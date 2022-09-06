@@ -4,12 +4,13 @@ import WelcomeScreen from '../screens/home'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/home';
+import ExploreNavigator from './ExploreNavigator';
 export default function HomeTabNavigator() {
 
     const Tab=createBottomTabNavigator()
   return (
    <Tab.Navigator >
-    <Tab.Screen name='Explore'  component={HomeScreen}
+    <Tab.Screen name='Explore'  component={ExploreNavigator}
         options={{tabBarIcon:(color)=>{
                return <FontAwesome size={25} color={color} name="search" />}
         }}

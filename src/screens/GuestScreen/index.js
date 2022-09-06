@@ -115,7 +115,7 @@ export default function Guest() {
 
    <View style={{marginBottom:20,backgroundColor:"#f15454",alignItems:"center",justifyContent:"center",height:50,marginHorizontal:20,borderRadius:10}}>
     <Pressable onPress={()=>{
-        return navigation.navigate('')
+        return navigation.navigate('Search Results')
     }}>
         <Text style={{fontWeight:"bold",fontSize:20,color:"white"}}>Search</Text>
     </Pressable>

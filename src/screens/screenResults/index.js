@@ -5,7 +5,7 @@ import Posts from '../../components/posts';
 export default function SearchResults() {
     
   return (
-    <View style={{alignItems:"center",width:"90%"}}>
+    <View style={{alignItems:"center",width:"90%",marginLeft:'auto',marginRight:'auto'}}>
 <FlatList data={feed} renderItem={(item)=>{
  
 return <Posts  data={item}/>
