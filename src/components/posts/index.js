@@ -15,7 +15,7 @@ export default function(props) {
   <Text style={{fontWeight:"700",fontSize:15,marginVertical:5}}>Type:{props.data.item.type}</Text>
   
   </View>
-  <View style={{width:'90%',alignItems:'flex-start'}}>
+  <View style={{width:'90%',alignItems:'flex-start' }}>
   <Text style={styles.prices}>
     <Text style={styles.oldPrice}>
 {props.data.item.oldPrice}$
